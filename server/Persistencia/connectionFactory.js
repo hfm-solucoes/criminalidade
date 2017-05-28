@@ -3,9 +3,9 @@ var mysql = require('mysql');
 function createDBConecction(){
     return mysql.createConnection({
         host: 'mysql.hfmsolucoes.kinghost.net',
-        user: '',
-        password: '',
-        database: ''
+        user: 'hfmsolucoes',
+        password: 'hfm2017',
+        database: 'hfmsolucoes'
     });
 }
 

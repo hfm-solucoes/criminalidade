@@ -11,6 +11,7 @@ module.exports = function(){
     app.use(bodyParser.urlencoded({extended: true}));
     app.use(expressValidator());
 
+    //consign({cwd: 'server-criminalidade'}) Configuração necessaria para o Kinghost
     consign()
         .include('Controllers')
         .then('Persistencia')
