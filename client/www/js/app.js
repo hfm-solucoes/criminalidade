@@ -3,7 +3,7 @@ var lugares;
 function getCrimes() {
     $.ajax({
 		type: 'get',
-		url:'http://hfmsolucoes.kinghost.net:21297/crimes',
+		url:'http://hfmsolucoes.kinghost.net/crimes',
 		async: false,
 	}).done(function(data) {
     	lugares = JSON.parse(data);
