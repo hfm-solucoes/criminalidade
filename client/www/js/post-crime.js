@@ -16,7 +16,7 @@ botaoCadastrar.addEventListener('click', function(event) {
         descricao: descricao,
         latitude: latitude,
         longitude: longitude,
-        data: data 
+        dtOcorrencia: data 
     }
 
     console.log(crimes);

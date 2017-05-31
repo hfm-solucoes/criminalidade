@@ -19,8 +19,22 @@ function initMap() {
 	let longitude = parseInt(locations[0].longitude);
 
 	var uluru = {lat: latitude, lng: longitude};
+	
+
+	 // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            uluru = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+
+            map.setCenter(uluru);
+          });
+        } 
+      
 	var map = new google.maps.Map(document.getElementById('map'), {
-		zoom: 8,
+		zoom: 11,
 		center: uluru
 	});
 
