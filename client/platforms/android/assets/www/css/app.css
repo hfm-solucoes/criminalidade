@@ -1,0 +1,10 @@
+.btn-add {
+    position: absolute;
+    bottom: 30px;
+    right: 25px;
+}
+
+ #map {
+        height: 400px;
+        width: 100%;
+       }
