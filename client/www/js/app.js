@@ -22,19 +22,19 @@ function initMap() {
 	
 
 	 // Try HTML5 geolocation.
-        if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(function(position) {
-            uluru = {
-              lat: position.coords.latitude,
-              lng: position.coords.longitude
-            };
+	if (navigator.geolocation) {
+		navigator.geolocation.getCurrentPosition(function(position) {
+			uluru = {
+				lat: position.coords.latitude,
+				lng: position.coords.longitude
+			};
 
-            map.setCenter(uluru);
-          });
-        } 
+			map.setCenter(uluru);
+		});
+	} 
       
 	var map = new google.maps.Map(document.getElementById('map'), {
-		zoom: 11,
+		zoom: 12,
 		center: uluru
 	});
 
@@ -46,7 +46,7 @@ function initMap() {
 		marker = new google.maps.Marker({
 			position: new google.maps.LatLng(locations[i].latitude, locations[i].longitude),
 			map: map,
-			title: locations[i].tipo
+			title: locations[i].tipo,
 		});
 	
 		google.maps.event.addListener(marker, 'click', (function(marker, i) {
